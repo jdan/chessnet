@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "blessed": "^0.1.81",
+    "forever": "^3.0.4",
     "telnet2": "0.0.1"
+  },
+  "scripts": {
+    "start": "forever main.js"
   }
 }
