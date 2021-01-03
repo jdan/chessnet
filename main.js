@@ -39,9 +39,9 @@ function boxOfFen(fen, parent) {
             i % 2 === 0
               ? j % 2 === 0
                 ? "white"
-                : "yellow"
+                : "#d59020"
               : j % 2 === 0
-              ? "yellow"
+              ? "#d59020"
               : "white",
           fg: "black",
         },
