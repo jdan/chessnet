@@ -94,12 +94,12 @@ telnet({ tty: true }, function (client) {
       height: 2,
       tags: true,
       content: [
-        `• {#d59020-fg}${
+        `w {#d59020-fg}${
           players[0].user.title ? players[0].user.title + " " : ""
-        }{/}${players[0].user.name} {#d1e4f6-fg}${players[0].rating}{/}`,
-        `◦ {#d59020-fg}${
+        }{/}${players[0].user.name} {blue-fg}${players[0].rating}{/}`,
+        `b {#d59020-fg}${
           players[1].user.title ? players[1].user.title + " " : ""
-        }{/}${players[1].user.name} {#d1e4f6-fg}${players[1].rating}{/}`,
+        }{/}${players[1].user.name} {blue-fg}${players[1].rating}{/}`,
       ].join("\n"),
     });
 
@@ -128,4 +128,4 @@ telnet({ tty: true }, function (client) {
     }
     emitter.off("update", onMove);
   });
-}).listen(23);
+}).listen(process.env.PORT || 23);
