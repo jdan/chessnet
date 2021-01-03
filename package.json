@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "telnet2": "0.0.1"
+  }
+}
