@@ -1,5 +1,6 @@
 let blessed = require("blessed");
 let telnet = require("telnet2");
+let http = require("http");
 let { emitter } = require("./chess.js");
 
 function boxOfFen(fen, parent) {
@@ -128,4 +129,14 @@ telnet({ tty: true }, function (client) {
     }
     emitter.off("update", onMove);
   });
-}).listen(process.env.PORT || 23);
+}).listen(process.env.TELNET_PORT || 23);
+
+let latest = { players: [], fen: "" };
+emitter.on("update", (st) => (latest = st));
+
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(latest));
+  })
+  .listen(process.env.HTTP_PORT || 8080);

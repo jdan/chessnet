@@ -10,6 +10,10 @@
 telnet chess.jordanscales.com
 ```
 
+```
+curl chess.jordanscales.com
+```
+
 ### running your own
 
 ```sh
