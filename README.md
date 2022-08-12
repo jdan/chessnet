@@ -2,17 +2,7 @@
 
 [Lichess](https://lichess.org) games over telnet (and http!)
 
-![chess](https://user-images.githubusercontent.com/287268/103469453-25560f80-4d33-11eb-99ca-dbb747986afc.gif)
-
-### try it out
-
-```
-telnet chess.jordanscales.com
-```
-
-```
-curl chess.jordanscales.com:12345
-```
+![chess](https://user-images.githubusercontent.com/287268/103469453-25560f80-4d33-11eb-99ca-dbb747986afc.gif
 
 ### running your own
 
